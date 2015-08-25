@@ -18,7 +18,7 @@
     addOnBlur: true,
     maxTags: undefined,
     maxChars: undefined,
-    confirmKeys: [13, 44],
+    confirmKeys: [13, 44, 186],
     onTagExists: function(item, $tag) {
       $tag.hide().fadeIn();
     },
@@ -84,7 +84,7 @@
         self.remove(self.itemsArray[0]);
 
       if (typeof item === "string" && this.$element[0].tagName === 'INPUT') {
-        var items = item.split(',');
+        var items = item.split(';');
         if (items.length > 1) {
           for (var i = 0; i < items.length; i++) {
             this.add(items[i], true);
